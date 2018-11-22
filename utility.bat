@@ -1,7 +1,8 @@
+REM Author: Thành, Tô - mitatoto1997@gmail.com
 @echo off
 setlocal enabledelayedexpansion
 
-REM A utility file to clone Katalon repo, checkout a new branch @arg2 based on branch @arg3
+REM A utility file to clone Katalon repo into folder @arg1, checkout a new branch @arg2 based on branch @arg3
 
 set argCount=0
 for %%x in (%*) do (
