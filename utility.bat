@@ -39,19 +39,12 @@ if %argCount% == 3 (
 	git pull origin %3
 	git checkout %3
 	
+	REM Try to create a new branch, then checkout to that branch 
 	echo ------ Checking out new branch %2
-	git rev-parse --verify %2 > temp.txt
-	set /P newBrachExists= <temp.txt
-	REM An error occured <=> temp.txt is empty <=> newBranchExists is undefined since environmental variable cannot be empty
-	if not defined !newBrachExists! (
-		echo ------ %2 not exists yet, creating and opening ...
-		git checkout -b %2
-	) else (
-		echo ------ %2 already exists, checking into %2 and opening ... 
-		git checkout %2
-	)
-	REM delete temp.txt to avoid an unnecessary commited file
-	del temp.txt
+	git checkout -b %2
+	REM this won't hurt
+	git checkout %2
+
 	REM Open folder of the new branch
 	start .
 	
