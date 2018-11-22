@@ -40,8 +40,10 @@ if %argCount% == 3 (
 	git checkout %3
 	
 	echo ------ Checking out new branch %2
+	REM git rev-prase --verify branch will cause an error if the branch does not exist yet
 	git rev-parse --verify %2 > temp.txt
 	set /P newBrachExists= <temp.txt
+	
 	REM An error occured <=> temp.txt is empty <=> newBranchExists is undefined since environmental variable cannot be empty
 	if not defined !newBrachExists! (
 		echo ------ %2 not exists yet, creating and opening ...
