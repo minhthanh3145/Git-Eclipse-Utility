@@ -10,11 +10,12 @@ for %%x in (%*) do (
 )
 
 REM Note that if your path contains a white space, wrap the path inside a " "
-set PARENT_FOLDER=C:\Users\thanhto
-set REFERENCE_REPO_FOLDER=C:\Users\thanhto\katalon
-set FOLDER_CONTAINING_BRANCHES=katalon_branches
-set PATH_TO_WORKSPACE=C:\Users\thanhto\Downloads\workspace
-set PATH_TO_ECLISPE="C:\Users\thanhto\Downloads\softwares\EclipseRCPNeon46 (2)\EclipseRCPNeon46"
+set PARENT_FOLDER=a
+set REFERENCE_REPO_FOLDER=b
+set FOLDER_CONTAINING_BRANCHES=c
+set PATH_TO_WORKSPACE=d
+set PATH_TO_ECLISPE=e
+set YOUR_REPO=f
 
 if %argCount% == 3 (
 	echo ------ Creating branch %1
@@ -29,7 +30,7 @@ if %argCount% == 3 (
 	
 	cd %FOLDER_CONTAINING_BRANCHES%\%1
 	echo ------ Setting remote url
-	git remote set-url origin https://github.com/kms-technology/katalon.git 
+	git remote set-url origin %YOUR_REPO%
 	echo ------ Fetching
 	git fetch
 	
