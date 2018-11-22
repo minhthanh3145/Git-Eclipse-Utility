@@ -18,4 +18,10 @@ It creates folder **@arg1** if not exists. Then it clones the repository into fo
 
 Here I separate between Eclipse workspace and the branch folder, since you won't want to commit Eclipse configuration files, but even that can be configured. Here I take care of some tricky processes like checking if a branch exists, and importing existing projects into Eclipse from command line. You should visit [this StackOverflow answer](https://stackoverflow.com/questions/44446216/eclipse-jdt-import-project-from-command-line) in order to do headless import easily. 
 
-You can twitch different things to suit your purpose.
+I also have a referenced folder of the repository I am working on. Basically I cloned the repository once and use it as a reference. This is because cloning from a folder is somewhat faster than cloning from git, especially if the project is big. However, you can still choose to clone directly if you so wish. There are many things you can twitch to suit your purpose.
+
+# How to use 
+Opening command line in the folder containing utility.bat, type: 
+```
+start utility @arg1 @arg2 @arg3
+```
