@@ -1,8 +1,8 @@
 # Git clone & Eclipse Workspace utility
-A utility to clone from Git into a new branch, creating a new Eclipse workspace and importing existing projects into this workspace
+A utility to clone from Git into a new branch, creating a new Eclipse workspace, importing an existing project into the workspace and launching Eclipse with this workspace.
 
 ## Motivation
-I find the work of cloning a repo into a new branch, then creating an Eclipse workspace and launch Eclipse with the workspace extremely repetitive, therefore in my spare time I wrote this batch file.
+I find the work above very repetitive, so I wrote this script to automate it. Feel free to tune it to your own purposes.
 
 ## Prerequisites
 Windows 10 + Eclipse + a github repo.
