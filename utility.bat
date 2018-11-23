@@ -58,14 +58,17 @@ if %argCount% == 3 (
 		echo ------ Eclipse workspace for \%1 already exists
 	)
 	
+		
 	cd %PATH_TO_ECLISPE%
-	REM refer to https://stackoverflow.com/questions/44446216/eclipse-jdt-import-project-from-command-line
-	echo ------ Importing existing projects from %PARENT_FOLDER%\%FOLDER_CONTAINING_BRANCHES%\%1\source into Eclipse workspace %1 
-	eclipse -nosplash -data %PATH_TO_WORKSPACE% -application com.seeq.eclipse.importprojects.headlessimport -import %PARENT_FOLDER%\%FOLDER_CONTAINING_BRANCHES%\%1\source
-	
-	echo ------ Launching Eclipse with workspace %1
-	eclipse -data %PATH_TO_WORKSPACE%
 
+	REM refer to https://stackoverflow.com/questions/44446216/eclipse-jdt-import-project-from-command-line
+	echo ------ Importing existing projects from %PARENT_FOLDER%\%FOLDER_CONTAINING_BRANCHES%\%1\source into Eclipse workspace %PATH_TO_WORKSPACE%\%1
+	eclipse -nosplash -data %PATH_TO_WORKSPACE%\%1 -application com.seeq.eclipse.importprojects.headlessimport -import %PARENT_FOLDER%\%FOLDER_CONTAINING_BRANCHES%\%1\source
+
+		
+	echo ------ Launching Eclipse with workspace %1
+	REM eclipse -data %PATH_TO_WORKSPACE%	
+	eclipse -data %PATH_TO_WORKSPACE%\%1
 
 ) else (
 	echo ------ 3 arguments are necessary
