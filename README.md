@@ -1,8 +1,8 @@
 # Git clone & Eclipse Workspace utility
-A utility to clone from Git into a new branch, creating a new Eclipse workspace, importing an existing project into the workspace and launching Eclipse with this workspace.
+A utility to clone a repo into another folder, create and checkout into a new branch, create a new Eclipse workspace, import an existing project into the workspace, then launch Eclipse with this workspace.
 
 ## Motivation
-I find the work above very repetitive, so I wrote this script to automate it. Feel free to tune it to your own purposes.
+I find the work above very repetitive, so I wrote this batch to automate it. It has literally saved me hundred of compound hours of manually typing the same lines over and over again.
 
 ## Prerequisites
 Windows 10 + Eclipse + a github repo.
@@ -12,9 +12,13 @@ Follow [this StakOverflow answer](https://stackoverflow.com/questions/44446216/e
 It takes 3 arguments:
 - **@arg1** Name of the folder containing the new branch
 - **@arg2** Name of the new branch
-- **@arg3** Base branch to checkout the new branch from
+- **@arg3** Base branch to checkout from
 
-It creates folder **@arg1** if not exists. Then it clones the repository into folder **@arg1**, fetching and pulling **@arg3**. It checkout or creates and checkout **@arg2** if not exists from **@arg3**. It also creates a new Eclipse workspace folder **@arg1** and imports existing projects into this workspace. Finally it launches Eclipse with this workspace. 
+It creates folder **@arg1** if not exists. 
+Then it clones the repository into folder **@arg1**, fetching and pulling **@arg3**. 
+It checkout or creates and checkout **@arg2** if not exists from **@arg3**. 
+It also creates a new Eclipse workspace folder **@arg1** and imports existing projects into this workspace. 
+Finally it launches Eclipse with this workspace. 
 
 Here I separate between Eclipse workspace and the branch folder, since you won't want to commit Eclipse configuration files, but even that can be configured. Here I take care of some tricky processes like checking if a branch exists, and importing existing projects into Eclipse from command line. You should visit [this StackOverflow answer](https://stackoverflow.com/questions/44446216/eclipse-jdt-import-project-from-command-line) in order to do headless import easily. 
 
