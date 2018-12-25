@@ -2,7 +2,7 @@
 A utility to clone a repo into another folder, create and checkout into a new branch, create a new Eclipse workspace, import an existing project into the workspace, then launch Eclipse with this workspace.
 
 ## Motivation
-I find the work above very repetitive, so I wrote this batch to automate it. It has literally saved me hundred of compound hours of manually typing the same lines over and over again.
+I find the work above very repetitive, so I wrote this batch to automate it. 
 
 ## Prerequisites
 Windows 10 + Eclipse + a github repo.
