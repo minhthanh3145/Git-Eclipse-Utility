@@ -29,3 +29,5 @@ Opening command line in the folder containing utility.bat, type:
 ```
 start utility @arg1 @arg2 @arg3
 ```
+## On how to use it more effectively
+Clearly, cloning a git repository everytime you want to work is a pain in the ass, espcially if you consistently work on your one big project that resides in just one repo. In such cases, what I do is that I have a referenced repo (folder) that I initially cloned, then I modify the script so that instead of cloning the repo, it simply copies the referenced repo into another location. Everything else is pretty much the same. 
